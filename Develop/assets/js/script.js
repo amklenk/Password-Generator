@@ -17,7 +17,7 @@ var characterIterator = function () {
     var character = options.charactersArray[index];
     passResults.push(character);
   }
-  return passResults;
+  return passResults = passResults.join("");
 };
 
 var generateBtn = document.querySelector("#generate");
@@ -76,7 +76,6 @@ var chooseCharacters = function () {
 function generatePassword() {
   var password = characterIterator();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
 

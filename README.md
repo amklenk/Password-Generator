@@ -56,7 +56,7 @@ The JavaScript code is organized by objects, functions, and event listeners. Eac
 - The chooseCharacters function allows the user to select the characters they want to include (they must pick at least one type) and create an array of those characters. This array is returned with the passLength(length of password) that corresponds to promptNumbers
 - The generatePassword function that takes the joined string from the index generator and displays it to the page in the box above the generate button.
 
-The only event listener is for the generate button to start the prompts in the writePassword function by calling on the generatePassword function that calls upon each preceeding function. 
+The only event listener is for the generate button to start the prompts in the writePassword function by calling on the generatePassword function that calls upon each preceeding function.
 
 ## Credits
 The following MDN websites were used as referene pages:

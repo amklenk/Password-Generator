@@ -77,7 +77,7 @@ function generatePassword() {
   var password = characterIterator();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-}
+};
 
 //event listener
 generateBtn.addEventListener("click", generatePassword);

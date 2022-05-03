@@ -27,12 +27,12 @@ The repository, Password-Generator, was created and cloned from GitHub. An index
 
 ## Links
 - [GitHub Repository](https://github.com/amklenk/Password-Generator)
-- [GitHub Pages Site](https://amklenk.github.io/Password-Generator/) (NOT WORKING)
+- [GitHub Pages Site](https://amklenk.github.io/Password-Generator/)
 
 ## Usage
 
 Below is a screenshot of the live site.
-![Password Generator Pages Site]() ADD PIC
+![Password Generator Pages Site](./assets/images/sitescreenshot.png)
 
 
 The site should fulfill all of the requirements so that the user can interactively generate a secure password.
@@ -60,7 +60,9 @@ The only event listener is for the generate button to start the prompts in the w
 
 ## Credits
 The following MDN websites were used as referene pages:
-- []()
+- [MDN Array - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [MDN Array.prototype.concat - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- [MDN Array.prototype.join - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 
 ## License
 

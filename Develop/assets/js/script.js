@@ -72,11 +72,12 @@ var chooseCharacters = function () {
   return returnObj;
 };
 
-//function that writes thes password, allows to happen again by looping back to first function: this function will call upon the random generator and then return the result from that function to the window. Then it should call upon the checking function to start over (onCLick)
+//function that writes thes password using the joined string from the iterator
 function generatePassword() {
   var password = characterIterator();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
+//event listener
 generateBtn.addEventListener("click", generatePassword);

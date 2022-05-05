@@ -1,45 +1,45 @@
-  //objects
+  //objects (arrays for each type of character)
   var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numbersArray= ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var symbolsArray = ["!", "~", "?", "'", "\"", "#", "$", "%", "&", ",", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "@", "[", "]", "^", "`", "_", "{", "}"];
 
 //functions
-//random index generator
+//random index generator that creates a joined string of characters that match the user's length and character choices
 var characterIterator = function () {
   var passResults = [];
-  var options = chooseCharacters();
-  if (options === null) {
+  var optionsChosen = chooseCharacters();
+  if (optionsChosen === null) {
     return;
   }
-  for (var i = 0; i < options.passLength; i++) {
-    var index = Math.floor(Math.random()*options.charactersArray.length);
-    var character = options.charactersArray[index];
-    passResults.push(character);
+  for (var i = 0; i < optionsChosen.passLength; i++) {
+    var indexEachCharacter = Math.floor(Math.random()*optionsChosen.charactersArray.length);
+    var passwordCharacters = optionsChosen.charactersArray[indexEachCharacter];
+    passResults.push(passwordCharacters);
   }
   return passResults = passResults.join("");
 };
 
 var generateBtn = document.querySelector("#generate");
 
-//function that checks if  x<8, x>=8 and < 128, allows user to input a number, assigned to a variable: this function should use an if, else or such to test if user"s input meets criteria
+//function that checks if the user input is <8, >=8 and <128
 var writePassword = function () {
-    var promptNumbers = window.prompt("How many characters long would you like your password to be? Choose a number between 7 and 129.");
-    promptNumbers = parseInt(promptNumbers);
-    if (promptNumbers < 8 || promptNumbers > 128) {
+    var passLength = window.prompt("How many characters long would you like your password to be? Choose a number between 7 and 129.");
+    passLength = parseInt(passLength);
+    if (passLength < 8 || passLength > 128) {
       window.alert("Your password can't be that long. Please choose a number between 7 and 129.");
       return writePassword();
     }
 
-    if (isNaN(promptNumbers)) {
+    if (isNaN(passLength)) {
       window.alert("Please select a numerical value.")
       return writePassword();
     }
-    return promptNumbers;
+    return passLength;
 };
 
 
-//function that allows user to choose the characters they want to use
+//function that allows user to choose the characters they want to use and creates an array with those choices
 var chooseCharacters = function () {
   var passLength = writePassword();
   console.log(passLength);
@@ -72,7 +72,7 @@ var chooseCharacters = function () {
   return returnObj;
 };
 
-//function that writes thes password using the joined string from the iterator
+//function that generates the password using the joined string from the iterator
 function generatePassword() {
   var password = characterIterator();
   var passwordText = document.querySelector("#password");

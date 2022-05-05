@@ -4,7 +4,7 @@
 
 This project was created to randomly generate a password for an employee that provides greater security. This is done by fulfilling the following requirements:
 * A generate password button is clicked and presents a series of prompts for password criteria.
-* A prompt directs the user to select a password length that is at least 8 charactesr and no more than 128 characters.
+* A prompt directs the user to select a password length that is at least 8 characters long and no more than 128 characters long.
 * Each password criteria prompt allows the user to choose whether or not they want certain characters in their password.
 * The user can confirm whether or not they want to include lowercase, uppercase, numeric, and/or special characters.
 * Upon answering each prompt, the input is validated with a requirement of at least one type of character selected.
@@ -41,22 +41,28 @@ The site should fulfill all of the requirements so that the user can interactive
 
 Each of the requirements was fullfilled:
 * When the generate password button is clicked, the site presents a series of prompts for password criteria.
-* A prompt directs the user to select a password length that is at least 8 charactesr and no more than 128 characters.
+* A prompt directs the user to select a password length that is at least 8 characters long and no more than 128 characters long.
 * Each password criteria prompt allows the user to choose whether or not they want certain characters in their password.
 * The user can confirm whether or not they want to include lowercase, uppercase, numeric, and/or special characters.
 * Upon answering each prompt, the input is validated with a requirement of at least one type of character selected.
 * Upon answering all prompts, the password matches the selected criteria.
 * Upon generating the password, the password is displayed in a prompt or written to the page.
 
-Once the respository was installed lcoally, since the html and css files were already created, the js file contains all of the coded changes.
+Once the respository was installed locally, since the html and css files were already created, the js file contains all of the coded changes.
 
-The JavaScript code is organized by objects, functions, and event listeners. Each object is an array that holds one of four types of characters: lowercase letters, uppercase letters, numbers, or special characters(symbols). The functions are as follows:
+The JavaScript code is organized by objects, functions, and event listeners. All of the code was first pseudocoded (as shown in the comments on the script.js file, which represent a pared-down version of the pseudocode). Each object is an array that holds one of four types of characters:
+- lowercase letters
+- uppercase letters
+- numbers
+- special characters (symbols)
+
+The functions are as follows:
 - The index generator randomly iterates over the array of all selected characters a number of times that matches the password length selected by the user. It joins the iterated strings into a password.
-- The writePassword function allows the user to select a number of characters between 8 and 128 using prompts and returning a value promptNumbers (which corresponds to passLength)
-- The chooseCharacters function allows the user to select the characters they want to include (they must pick at least one type) and create an array of those characters. This array is returned with the passLength(length of password) that corresponds to promptNumbers
-- The generatePassword function that takes the joined string from the index generator and displays it to the page in the box above the generate button.
+- The writePassword function allows the user to select a number of characters between 8 and 128 using prompts and returning a value passLength (the length of the password).
+- The chooseCharacters function allows the user to select the characters they want to include (they must pick at least one type) and create an array of those characters. This array, charactersArray, is returned with passLength.
+- The generatePassword function takes the joined string from the index generator and displays it to the page in the box above the generate button.
 
-The only event listener is for the generate button to start the prompts in the writePassword function by calling on the generatePassword function that calls upon each preceeding function.
+The only event listener is an onclick event for the generate button to start the prompts in the writePassword function by calling on the generatePassword function that then calls upon each preceeding function.
 
 ## Credits
 The following MDN websites were used as referene pages:

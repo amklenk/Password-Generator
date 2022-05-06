@@ -42,7 +42,6 @@ var writePassword = function () {
 //function that allows user to choose the characters they want to use and creates an array with those choices
 var chooseCharacters = function () {
   var passLength = writePassword();
-  console.log(passLength);
   var charactersArray = [];
   var promptChooseLowercase = window.confirm("Would you like to use lowercase letters in your password?");
   if (promptChooseLowercase) {

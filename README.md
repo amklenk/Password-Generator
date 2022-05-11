@@ -12,9 +12,6 @@ This project was created to randomly generate a password for an employee that pr
 * Upon generating the password, the password is displayed in a prompt or written to the page.
 
 ## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Links](#links)
 - [Usage](#usage)
@@ -65,7 +62,7 @@ The functions are as follows:
 The only event listener is an onclick event for the generate button to start the prompts in the writePassword function by calling on the generatePassword function that then calls upon each preceeding function.
 
 ## Credits
-The following MDN websites were used as referene pages:
+The following MDN websites were used as reference pages:
 - [MDN Array - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [MDN Array.prototype.concat - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 - [MDN Array.prototype.join - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
